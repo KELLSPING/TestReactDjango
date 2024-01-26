@@ -13,3 +13,5 @@
 ## Cmd
 1. $ pipenv install djangorestframework
 2. $ pipenv install django-cors-headers
+3. $ pipenv install django
+4. $ pipenv shell
