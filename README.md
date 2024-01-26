@@ -16,3 +16,5 @@
 3. $ pipenv install django
 4. $ pipenv shell
 5. $ django-admin startproject backend
+6. $ cd backend
+7. $ python .\manage.py startapp app
