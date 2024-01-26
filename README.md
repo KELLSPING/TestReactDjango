@@ -20,3 +20,5 @@
 7. $ python .\manage.py startapp app
 8. $ python .\manage.py makemigrations
 9. $ python .\manage.py migrate
+10. $ python .\manage.py createsuperuser
+11. $ python .\manage.py runserver
