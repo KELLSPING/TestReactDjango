@@ -8,4 +8,8 @@
 
 ## Python Packages
 - pipenv 2023.11.17
-  - pip install pipenv
+  - $ pip install pipenv
+
+## Cmd
+1. $ pipenv install djangorestframework
+2. $ pipenv install django-cors-headers
