@@ -19,3 +19,4 @@
 6. $ cd backend
 7. $ python .\manage.py startapp app
 8. $ python .\manage.py makemigrations
+9. $ python .\manage.py migrate
