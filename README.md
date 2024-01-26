@@ -18,3 +18,4 @@
 5. $ django-admin startproject backend
 6. $ cd backend
 7. $ python .\manage.py startapp app
+8. $ python .\manage.py makemigrations
