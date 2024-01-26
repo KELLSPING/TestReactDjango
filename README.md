@@ -15,3 +15,4 @@
 2. $ pipenv install django-cors-headers
 3. $ pipenv install django
 4. $ pipenv shell
+5. $ django-admin startproject backend
