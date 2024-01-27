@@ -10,6 +10,9 @@
 - pipenv 2023.11.17
   - $ pip install pipenv
 
+## Packet Mangager : Scoop
+- nodejs-lts 20.10.0
+
 ## Cmd
 1. $ pipenv install djangorestframework
 2. $ pipenv install django-cors-headers
@@ -22,3 +25,5 @@
 9. $ python .\manage.py migrate
 10. $ python .\manage.py createsuperuser
 11. $ python .\manage.py runserver
+12. $ cd {Project Folder}
+13. $ npx create-react-app frontend
