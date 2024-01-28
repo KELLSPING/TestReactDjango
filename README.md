@@ -28,4 +28,5 @@
 12. $ cd {Project Folder}
 13. $ npx create-react-app frontend
 14. $ cd frontend
-15. $ npm start
+15. $ npm install axios
+16. $ npm start
