@@ -27,3 +27,5 @@
 11. $ python .\manage.py runserver
 12. $ cd {Project Folder}
 13. $ npx create-react-app frontend
+14. $ cd frontend
+15. $ npm start
