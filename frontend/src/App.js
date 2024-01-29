@@ -6,14 +6,20 @@ import Create from "./components/Create";
 import NavBar from "./components/NavBar";
 
 function App() {
+  const myWidth = 200;
+
   return (
     <div className="App">
-      <NavBar/>
-      <Routes>
-        <Route path="" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/create" element={<Create />} />
-      </Routes>
+      <NavBar
+        drawerWidth={myWidth}
+        content={
+          <Routes>
+            <Route path="" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/create" element={<Create />} />
+          </Routes>
+        }
+      />
     </div>
   );
 }

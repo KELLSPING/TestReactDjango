@@ -15,11 +15,11 @@ import HomeIcon from "@mui/icons-material/Home";
 import InfoIcon from "@mui/icons-material/Info";
 import CreateIcon from "@mui/icons-material/Create";
 
-const drawerWidth = 240;
-
-export default function NavBar() {
+export default function NavBar(props) {
   const location = useLocation();
   const path = location.pathname;
+
+  const { drawerWidth, content } = props;
 
   return (
     <Box sx={{ display: "flex" }}>
@@ -87,6 +87,7 @@ export default function NavBar() {
       </Drawer>
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         <Toolbar />
+        {content}
       </Box>
     </Box>
   );
