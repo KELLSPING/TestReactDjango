@@ -16,6 +16,8 @@
   - https://mui.com/material-ui/
 - MUI Core / Material UI / Material Icons
   - https://mui.com/material-ui/material-icons/
+- Django REST frameworl - ViewSets
+  - https://www.django-rest-framework.org/api-guide/viewsets/
 
 ## Icons
 - Home
