@@ -5,6 +5,8 @@
   - https://www.youtube.com/watch?v=fBA-jaWab9k
 - Git Commit Message 這樣寫會更好，替專案引入規範與範例
   - https://wadehuanglearning.blogspot.com/2019/05/commit-commit-commit-why-what-commit.html
+- Django React App Tutorial
+  - https://www.youtube.com/playlist?list=PLmEKHA8iFrmBCo1Guf3xbM1af5p5Ja-fy
 
 ## Python Packages
 - pipenv 2023.11.17
