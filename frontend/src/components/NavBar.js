@@ -14,12 +14,64 @@ import ListItemText from "@mui/material/ListItemText";
 import HomeIcon from "@mui/icons-material/Home";
 import InfoIcon from "@mui/icons-material/Info";
 import CreateIcon from "@mui/icons-material/Create";
+import MenuIcon from "@mui/icons-material/Menu";
+import { IconButton } from "@mui/material";
 
 export default function NavBar(props) {
   const location = useLocation();
   const path = location.pathname;
 
   const { drawerWidth, content } = props;
+
+  const [open, setOpen] = React.useState(false);
+
+  const changeOpenState = () => {
+    setOpen(!open);
+  };
+
+  const myDrawer = (
+    <div>
+      <Toolbar />
+      <Box sx={{ overflow: "auto" }}>
+        <List>
+          <ListItem disablePadding>
+            <ListItemButton component={Link} to="/" selected={"/" === path}>
+              <ListItemIcon>
+                <HomeIcon />
+              </ListItemIcon>
+              <ListItemText primary={"Home"} />
+            </ListItemButton>
+          </ListItem>
+
+          <ListItem disablePadding>
+            <ListItemButton
+              component={Link}
+              to="/about"
+              selected={"/about" === path}
+            >
+              <ListItemIcon>
+                <InfoIcon />
+              </ListItemIcon>
+              <ListItemText primary={"About"} />
+            </ListItemButton>
+          </ListItem>
+
+          <ListItem disablePadding>
+            <ListItemButton
+              component={Link}
+              to="/create"
+              selected={"/create" === path}
+            >
+              <ListItemIcon>
+                <CreateIcon />
+              </ListItemIcon>
+              <ListItemText primary={"Create"} />
+            </ListItemButton>
+          </ListItem>
+        </List>
+      </Box>
+    </div>
+  );
 
   return (
     <Box sx={{ display: "flex" }}>
@@ -29,6 +81,14 @@ export default function NavBar(props) {
         sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
       >
         <Toolbar>
+          <IconButton
+            color="inheret"
+            onClick={changeOpenState}
+            sx={{ mr: 1, display: { sm: "none" } }}
+          >
+            <MenuIcon />
+          </IconButton>
+
           <Typography variant="h6" noWrap component="div">
             Our Application
           </Typography>
@@ -37,6 +97,7 @@ export default function NavBar(props) {
       <Drawer
         variant="permanent"
         sx={{
+          display: { xs: "none", sm: "block" },
           width: drawerWidth,
           flexShrink: 0,
           [`& .MuiDrawer-paper`]: {
@@ -45,45 +106,23 @@ export default function NavBar(props) {
           },
         }}
       >
-        <Toolbar />
-        <Box sx={{ overflow: "auto" }}>
-          <List>
-            <ListItem disablePadding>
-              <ListItemButton component={Link} to="/" selected={"/" === path}>
-                <ListItemIcon>
-                  <HomeIcon />
-                </ListItemIcon>
-                <ListItemText primary={"Home"} />
-              </ListItemButton>
-            </ListItem>
-
-            <ListItem disablePadding>
-              <ListItemButton
-                component={Link}
-                to="/about"
-                selected={"/about" === path}
-              >
-                <ListItemIcon>
-                  <InfoIcon />
-                </ListItemIcon>
-                <ListItemText primary={"About"} />
-              </ListItemButton>
-            </ListItem>
-
-            <ListItem disablePadding>
-              <ListItemButton
-                component={Link}
-                to="/create"
-                selected={"/create" === path}
-              >
-                <ListItemIcon>
-                  <CreateIcon />
-                </ListItemIcon>
-                <ListItemText primary={"Create"} />
-              </ListItemButton>
-            </ListItem>
-          </List>
-        </Box>
+        {myDrawer}
+      </Drawer>
+      <Drawer
+        variant="temporary"
+        open={open}
+        onClose={changeOpenState}
+        sx={{
+          display: { xs: "block", sm: "none" },
+          width: drawerWidth,
+          flexShrink: 0,
+          [`& .MuiDrawer-paper`]: {
+            width: drawerWidth,
+            boxSizing: "border-box",
+          },
+        }}
+      >
+        {myDrawer}
       </Drawer>
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         <Toolbar />

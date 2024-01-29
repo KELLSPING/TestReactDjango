@@ -6,7 +6,7 @@ import Create from "./components/Create";
 import NavBar from "./components/NavBar";
 
 function App() {
-  const myWidth = 200;
+  const myWidth = 220;
 
   return (
     <div className="App">
