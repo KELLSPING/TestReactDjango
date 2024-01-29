@@ -33,26 +33,28 @@
 - nodejs-lts 20.10.0
 
 ## Cmd
-1. $ mkdir TestReactDjango
-2. $ cd TestReactDjango
-3. $ pipenv install djangorestframework
-4. $ pipenv install django-cors-headers
-5. $ pipenv install django
-6. $ pipenv shell
-7. $ mkdir backend
-8. $ cd backend
-9. Create project in the current directory.
-    - $ django-admin startproject crud .
-10. $ python .\manage.py startapp api
-11. $ python .\manage.py makemigrations
-12. $ python .\manage.py migrate
-13. $ python .\manage.py createsuperuser
-14. $ python .\manage.py runserver
-15. $ cd TestReactDjango
-16. $ npx create-react-app frontend
-17. $ cd frontend
-18. $ npm install axios
-19. $ npm start
-20. $ npm i react-router-dom
-21. $ npm install @mui/material @emotion/react @emotion/styled
-22. $ npm install @mui/icons-material
+- project
+  - $ mkdir TestReactDjango
+  - $ cd TestReactDjango
+  - $ pipenv install djangorestframework
+  - $ pipenv install django-cors-headers
+  - $ pipenv install django
+  - $ pipenv shell
+- frontend
+  - $ mkdir frontend
+  - $ cd frontend
+  - $ npx create-react-app frontend
+  - $ npm install axios
+  - $ npm i react-router-dom
+  - $ npm install @mui/material @emotion/react @emotion/styled
+  - $ npm install @mui/icons-material
+  - $ npm start
+- backend
+  - $ mkdir backend
+  - $ cd backend
+  - $ django-admin startproject crud .
+  - $ python .\manage.py startapp api
+  - $ python .\manage.py makemigrations
+  - $ python .\manage.py migrate
+  - $ python .\manage.py createsuperuser
+  - $ python .\manage.py runserver
