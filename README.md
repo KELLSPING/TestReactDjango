@@ -8,6 +8,12 @@
 - Django React App Tutorial
   - https://www.youtube.com/playlist?list=PLmEKHA8iFrmBCo1Guf3xbM1af5p5Ja-fy
 
+## Tools
+- MUI Core / Material UI
+  - https://mui.com/material-ui/
+- MUI Core / Material UI / Material Icons
+  - https://mui.com/material-ui/material-icons/
+
 ## Python Packages
 - pipenv 2023.11.17
   - $ pip install pipenv
@@ -33,3 +39,5 @@
 15. $ npm install axios
 16. $ npm start
 17. $ npm i react-router-dom
+18. $ npm install @mui/material @emotion/react @emotion/styled
+19. $ npm install @mui/icons-material
