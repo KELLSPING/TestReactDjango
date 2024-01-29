@@ -9,10 +9,21 @@
   - https://www.youtube.com/playlist?list=PLmEKHA8iFrmBCo1Guf3xbM1af5p5Ja-fy
 
 ## Tools
+- Code formatting in VSCode
+  - Windows : Shift + Alt + F
+  - Linux : Ctrl + Shift + I
 - MUI Core / Material UI
   - https://mui.com/material-ui/
 - MUI Core / Material UI / Material Icons
   - https://mui.com/material-ui/material-icons/
+
+## Icons
+- Home
+  - https://mui.com/material-ui/material-icons/?query=home&selected=Home
+- About
+  - https://mui.com/material-ui/material-icons/?query=about&selected=Info
+- Create
+  - https://mui.com/material-ui/material-icons/?query=create&selected=Create
 
 ## Python Packages
 - pipenv 2023.11.17
