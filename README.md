@@ -18,6 +18,16 @@
   - https://mui.com/material-ui/material-icons/
 - Django REST frameworl - ViewSets
   - https://www.django-rest-framework.org/api-guide/viewsets/
+- MUI Core / Material UI / Text Field
+  - https://mui.com/material-ui/react-text-field/
+- MUI Core / Material UI / Select
+  - https://mui.com/material-ui/react-select/
+- MUI Core / X / Date and Time Pickers
+  - https://mui.com/x/react-date-pickers/getting-started/
+- MUI Core / X / Date Picker
+  - https://mui.com/x/react-date-pickers/date-picker/
+- React Hook Form
+  - https://react-hook-form.com/
 
 ## Icons
 - Home
@@ -50,6 +60,9 @@
   - $ npm i react-router-dom
   - $ npm install @mui/material @emotion/react @emotion/styled
   - $ npm install @mui/icons-material
+  - $ npm install react-hook-form
+  - $ npm install @mui/x-date-pickers
+  - $ npm install dayjs
   - $ npm start
 - backend
   - $ mkdir backend
