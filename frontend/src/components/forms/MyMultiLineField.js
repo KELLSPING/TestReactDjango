@@ -3,7 +3,7 @@ import TextField from "@mui/material/TextField";
 import { Controller } from "react-hook-form";
 
 export default function MyMultiLineField(props) {
-  const { label, placeholder, name, control } = props;
+  const { label, width, placeholder, name, control } = props;
 
   return (
     <Controller
@@ -16,6 +16,7 @@ export default function MyMultiLineField(props) {
       }) => (
         <TextField
           id="standard-multiline-static"
+          sx={{ width: { width } }}
           label={label}
           multiline
           rows={4}

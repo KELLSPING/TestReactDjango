@@ -44,18 +44,21 @@ const Create = () => {
             name={"name"}
             control={control}
             placeholder="Provide a project name"
+            width={"30%"}
           />
 
           <MyDatePickerField
             label="Start date"
             name={"start_date"}
             control={control}
+            width={"30%"}
           />
 
           <MyDatePickerField
             label="End date"
             name={"end_date"}
             control={control}
+            width={"30%"}
           />
         </Box>
       </Box>
