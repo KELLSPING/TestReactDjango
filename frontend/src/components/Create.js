@@ -33,7 +33,12 @@ const Create = () => {
           flexDirection: "column",
         }}
       >
-        <Box>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "space-around",
+          }}
+        >
           <MyTextField
             label="Name"
             name={"name"}
@@ -41,9 +46,17 @@ const Create = () => {
             placeholder="Provide a project name"
           />
 
-          <MyDatePickerField label="Start date" name={"start_date"} control={control} />
+          <MyDatePickerField
+            label="Start date"
+            name={"start_date"}
+            control={control}
+          />
 
-          <MyDatePickerField label="End date" name={"end_date"} control={control} />
+          <MyDatePickerField
+            label="End date"
+            name={"end_date"}
+            control={control}
+          />
         </Box>
       </Box>
     </div>
