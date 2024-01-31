@@ -1,7 +1,10 @@
 import React from "react";
+import { useForm } from "react-hook-form";
 import { Box, Typography } from "@mui/material";
 import MyTextField from "./forms/MyTextField";
-import { useForm } from "react-hook-form";
+import MySelectField from "./forms/MySelectField";
+import MyMultiLineField from "./forms/MyMultiLineField";
+import MyDatePickerField from "./forms/MyDatePickerField";
 
 const Create = () => {
   const { control } = useForm();
@@ -37,8 +40,11 @@ const Create = () => {
             control={control}
             placeholder="Provide a project name"
           />
+
+          <MyDatePickerField label="Start date" name={"start_date"} control={control} />
+
+          <MyDatePickerField label="End date" name={"end_date"} control={control} />
         </Box>
-        <Box>Three forms</Box>
       </Box>
     </div>
   );
