@@ -41,7 +41,7 @@ const Create = () => {
         >
           <MyTextField
             label="Name"
-            name={"name"}
+            name="name"
             control={control}
             placeholder="Provide a project name"
             width={"30%"}
@@ -49,17 +49,41 @@ const Create = () => {
 
           <MyDatePickerField
             label="Start date"
-            name={"start_date"}
+            name="start_date"
             control={control}
             width={"30%"}
           />
 
           <MyDatePickerField
             label="End date"
-            name={"end_date"}
+            name="end_date"
             control={control}
             width={"30%"}
           />
+        </Box>
+
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "space-around",
+          }}
+        >
+          <MyMultiLineField
+            label="Comments"
+            name="comments"
+            control={control}
+            placeholder="Provide project comments"
+            width={"30%"}
+          />
+
+          <MySelectField
+            label="Status"
+            name="status"
+            control={control}
+            width={"30%"}
+          />
+
+          <Box sx={{ width: "30%" }}></Box>
         </Box>
       </Box>
     </div>

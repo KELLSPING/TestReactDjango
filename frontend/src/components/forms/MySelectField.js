@@ -14,7 +14,6 @@ export default function MySelectField(props) {
   };
 
   return (
-    <div>
       <FormControl variant="filled" sx={{ width: { width } }}>
         <InputLabel id="demo-simple-select-filled-label">{label}</InputLabel>
         <Controller
@@ -22,7 +21,7 @@ export default function MySelectField(props) {
           control={control}
           render={({
             field: { onChange, value },
-            filedState: { error },
+            fieldState: { error },
             formState,
           }) => (
             <Select
@@ -41,6 +40,5 @@ export default function MySelectField(props) {
           )}
         />
       </FormControl>
-    </div>
   );
 }

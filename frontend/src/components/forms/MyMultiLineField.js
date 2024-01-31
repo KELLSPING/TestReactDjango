@@ -11,7 +11,7 @@ export default function MyMultiLineField(props) {
       control={control}
       render={({
         field: { onChange, value },
-        filedState: { error },
+        fieldState: { error },
         formState,
       }) => (
         <TextField
