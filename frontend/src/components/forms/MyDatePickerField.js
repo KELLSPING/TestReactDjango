@@ -13,7 +13,12 @@ export default function MyDatePickerField(props) {
         name={name}
         control={control}
         render={({ field: { onChange, value } }) => (
-          <DatePicker label={label} sx={{ width: { width } }} />
+          <DatePicker
+            label={label}
+            sx={{ width: { width } }}
+            onChange={onChange}
+            value={value}
+          />
         )}
       />
     </LocalizationProvider>

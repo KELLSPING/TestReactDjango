@@ -18,9 +18,9 @@ export default function MyMultiLineField(props) {
           id="standard-multiline-static"
           sx={{ width: { width } }}
           label={label}
-          multiline
-          rows={4}
-          defaultValue="Default Value"
+          onChange={onChange}
+          value={value}
+          rows={1}
           variant="standard"
           placeholder={placeholder}
         />

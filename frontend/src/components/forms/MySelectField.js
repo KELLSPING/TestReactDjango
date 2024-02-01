@@ -14,31 +14,31 @@ export default function MySelectField(props) {
   };
 
   return (
-      <FormControl variant="filled" sx={{ width: { width } }}>
-        <InputLabel id="demo-simple-select-filled-label">{label}</InputLabel>
-        <Controller
-          name={name}
-          control={control}
-          render={({
-            field: { onChange, value },
-            fieldState: { error },
-            formState,
-          }) => (
-            <Select
-              labelId="demo-simple-select-filled-label"
-              id="demo-simple-select-filled"
-              value={age}
-              onChange={handleChange}
-            >
-              <MenuItem value="">
-                <em>None</em>
-              </MenuItem>
-              <MenuItem value={10}>Ten</MenuItem>
-              <MenuItem value={20}>Twenty</MenuItem>
-              <MenuItem value={30}>Thirty</MenuItem>
-            </Select>
-          )}
-        />
-      </FormControl>
+    <FormControl variant="standard" sx={{ width: { width } }}>
+      <InputLabel id="demo-simple-select-filled-label">{label}</InputLabel>
+      <Controller
+        name={name}
+        control={control}
+        render={({
+          field: { onChange, value },
+          fieldState: { error },
+          formState,
+        }) => (
+          <Select
+            labelId="demo-simple-select-filled-label"
+            id="demo-simple-select-filled"
+            onChange={onChange}
+            value={value}
+          >
+            <MenuItem value="">
+              <em>None</em>
+            </MenuItem>
+            <MenuItem value={"Open"}>Open</MenuItem>
+            <MenuItem value={"In progress"}>Work in projress</MenuItem>
+            <MenuItem value={"Complete"}>Complete</MenuItem>
+          </Select>
+        )}
+      />
+    </FormControl>
   );
 }
