@@ -28,6 +28,8 @@
   - https://mui.com/x/react-date-pickers/date-picker/
 - React Hook Form
   - https://react-hook-form.com/
+- AXIOS
+  - https://axios-http.com/docs/intro
 
 ## Icons
 - Home
@@ -63,6 +65,7 @@
   - $ npm install react-hook-form
   - $ npm install @mui/x-date-pickers
   - $ npm install dayjs
+  - $ npm install axios
   - $ npm start
 - backend
   - $ mkdir backend

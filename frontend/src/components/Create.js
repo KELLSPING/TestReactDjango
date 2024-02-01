@@ -7,7 +7,15 @@ import MyMultiLineField from "./forms/MyMultiLineField";
 import MyDatePickerField from "./forms/MyDatePickerField";
 
 const Create = () => {
-  const { handleSubmit, reset, setValue, control } = useForm();
+  const defaultValues = {
+    name:'',
+    comments:"",
+    status:"",
+    start_date:"",
+    end_date:"",
+  }
+
+  const { handleSubmit, reset, setValue, control } = useForm({defaultValues:defaultValues});
 
   const submission = (data) => console.log(data);
 
