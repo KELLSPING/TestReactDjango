@@ -30,6 +30,8 @@
   - https://react-hook-form.com/
 - AXIOS
   - https://axios-http.com/docs/intro
+- Material React Table V2
+  - https://www.material-react-table.com/
 
 ## Icons
 - Home
@@ -66,6 +68,7 @@
   - $ npm install @mui/x-date-pickers
   - $ npm install dayjs
   - $ npm install axios
+  - $ npm install material-react-table@1
   - $ npm start
 - backend
   - $ mkdir backend
