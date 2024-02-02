@@ -5,19 +5,45 @@ import MyTextField from "./forms/MyTextField";
 import MySelectField from "./forms/MySelectField";
 import MyMultiLineField from "./forms/MyMultiLineField";
 import MyDatePickerField from "./forms/MyDatePickerField";
+import AxiosInstancce from "./Axios";
+import Dayjs from "dayjs";
+import { useNavigate } from "react-router-dom";
 
 const Create = () => {
+  const navigate = useNavigate();
+
   const defaultValues = {
-    name:'',
-    comments:"",
-    status:"",
-    start_date:"",
-    end_date:"",
-  }
+    name: "",
+    comments: "",
+    status: "",
+  };
 
-  const { handleSubmit, reset, setValue, control } = useForm({defaultValues:defaultValues});
+  const { handleSubmit, reset, setValue, control } = useForm({
+    defaultValues: defaultValues,
+  });
 
-  const submission = (data) => console.log(data);
+  const submission = (data) => {
+    // console.log(data)
+
+    const StartDate = Dayjs(data.start_date["$d"]).format("YYYY-MM-DD");
+    // console.log(StartDate)
+    const EndDate = Dayjs(data.end_date["$d"]).format("YYYY-MM-DD");
+    // console.log(EndDate)
+
+    AxiosInstancce.post(`project/`, {
+      name: data.name,
+      status: data.status,
+      comments: data.comments,
+      start_date: StartDate,
+      end_date: EndDate,
+    })
+      .then((res) => {
+        navigate(`/`);
+      })
+      .catch((error) => {
+        console.error("Error:", error.message);
+      });
+  };
 
   return (
     <div>
@@ -96,7 +122,7 @@ const Create = () => {
             />
 
             <Box sx={{ width: "30%" }}>
-              <Button variant="contained" type="submit" sx={{width:"100%"}}>
+              <Button variant="contained" type="submit" sx={{ width: "100%" }}>
                 Submit
               </Button>
             </Box>
