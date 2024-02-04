@@ -9,7 +9,7 @@ import AxiosInstancce from "./Axios";
 import Dayjs from "dayjs";
 import { useNavigate } from "react-router-dom";
 
-const Create = () => {
+const Edit = () => {
   const navigate = useNavigate();
 
   const defaultValues = {
@@ -133,4 +133,4 @@ const Create = () => {
   );
 };
 
-export default Create;
+export default Edit;
