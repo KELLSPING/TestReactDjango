@@ -16,6 +16,8 @@ const Create = () => {
     name: "",
     comments: "",
     status: "",
+    start_date: Dayjs(),
+    end_date: Dayjs(),
   };
 
   const { handleSubmit, control } = useForm({

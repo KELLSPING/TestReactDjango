@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { Box, Button, Typography } from "@mui/material";
 import MyTextField from "./forms/MyTextField";
@@ -7,18 +7,41 @@ import MyMultiLineField from "./forms/MyMultiLineField";
 import MyDatePickerField from "./forms/MyDatePickerField";
 import AxiosInstancce from "./Axios";
 import Dayjs from "dayjs";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const Edit = () => {
+  const MyParam = useParams();
+  const MyId = MyParam.id;
+  const [loading, setLoading] = useState(true);
+
+  const GetDate = () => {
+    AxiosInstancce.get(`project/${MyId}`).then((res) => {
+      // console.log(res.data);
+      setValue("name", res.data.name);
+      setValue("status", res.data.status);
+      setValue("comments", res.data.comments);
+      setValue("start_date", Dayjs(res.data.start_date));
+      setValue("end_date", Dayjs(res.data.end_date));
+      setLoading(false);
+    });
+  };
+
+  useEffect(() => {
+    // console.log(MyId);
+    GetDate();
+  }, []);
+
   const navigate = useNavigate();
 
   const defaultValues = {
     name: "",
     comments: "",
     status: "",
+    start_date: Dayjs(),
+    end_date: Dayjs(),
   };
 
-  const { handleSubmit, control } = useForm({
+  const { handleSubmit, setValue, control } = useForm({
     defaultValues: defaultValues,
   });
 
@@ -30,7 +53,7 @@ const Edit = () => {
     const EndDate = Dayjs(data.end_date["$d"]).format("YYYY-MM-DD");
     // console.log(EndDate)
 
-    AxiosInstancce.post(`project/`, {
+    AxiosInstancce.put(`project/${MyId}/`, {
       name: data.name,
       status: data.status,
       comments: data.comments,

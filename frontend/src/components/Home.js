@@ -62,9 +62,9 @@ const Home = () => {
           columns={columns}
           data={myData}
           enableRowActions
-          renderRowActions={(row) => (
+          renderRowActions={({row}) => (
             <Box sx={{ display: "flex", flexWrap: "nowrap", gap: "8px" }}>
-              <IconButton color="secondary" component={Link} to={`edit/${row.id}`} >
+              <IconButton color="secondary" component={Link} to={`edit/${row.original.id}`} >
                 <EditIcon/>
               </IconButton>
               <IconButton color="error">
