@@ -14,7 +14,7 @@ const Edit = () => {
   const MyId = MyParam.id;
   const [loading, setLoading] = useState(true);
 
-  const GetDate = () => {
+  const GetData = () => {
     AxiosInstancce.get(`project/${MyId}`).then((res) => {
       // console.log(res.data);
       setValue("name", res.data.name);
@@ -28,7 +28,7 @@ const Edit = () => {
 
   useEffect(() => {
     // console.log(MyId);
-    GetDate();
+    GetData();
   }, []);
 
   const navigate = useNavigate();
