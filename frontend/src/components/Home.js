@@ -10,7 +10,7 @@ const Home = () => {
   const [myData, setMydata] = useState();
   const [loading, setLoading] = useState(true);
 
-  const GetDate = () => {
+  const GetData = () => {
     AxiosInstancce.get(`project/`).then((res) => {
       setMydata(res.data);
       console.log(res.data);
@@ -19,7 +19,7 @@ const Home = () => {
   };
 
   useEffect(() => {
-    GetDate();
+    GetData();
   }, []);
 
   const columns = useMemo(
@@ -67,7 +67,7 @@ const Home = () => {
               <IconButton color="secondary" component={Link} to={`edit/${row.original.id}`} >
                 <EditIcon/>
               </IconButton>
-              <IconButton color="error">
+              <IconButton color="error" component={Link} to={`delete/${row.original.id}`}>
                 <DeleteIcon />
               </IconButton>
             </Box>
