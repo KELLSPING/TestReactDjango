@@ -8,6 +8,8 @@ import MyDatePickerField from "./forms/MyDatePickerField";
 import AxiosInstancce from "./Axios";
 import Dayjs from "dayjs";
 import { useNavigate } from "react-router-dom";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
 
 const Create = () => {
   const navigate = useNavigate();
@@ -20,8 +22,20 @@ const Create = () => {
     end_date: Dayjs(),
   };
 
+  const schema = yup.object({
+    name: yup.string().required("Name is required."),
+    status: yup.string().required("Status is required."),
+    comments: yup.string(),
+    start_date: yup.date().required("Start date is required."),
+    end_date: yup
+      .date()
+      .required("End date is required.")
+      .min(yup.ref("start_date"), '"End date" cannot before "Start date".'),
+  });
+
   const { handleSubmit, control } = useForm({
     defaultValues: defaultValues,
+    resolver: yupResolver(schema),
   });
 
   const submission = (data) => {
