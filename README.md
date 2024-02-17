@@ -69,6 +69,7 @@
   - $ npm install dayjs
   - $ npm install axios
   - $ npm install material-react-table@1
+  - $ npm install @hookform/resolvers yup
   - $ npm start
 - backend
   - $ mkdir backend
